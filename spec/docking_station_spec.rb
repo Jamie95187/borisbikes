@@ -9,7 +9,7 @@ describe DockingStation do
 
   it 'should get a bike that is working from the station' do
     bike = subject.release_bike
-    expect(bike.isWorking?).to be true
+    expect(bike.working?).to be true
   end
 
 end

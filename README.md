@@ -37,5 +37,5 @@ I'd like to see if the bike is working.
 | **Object** | **Messages** |
 |--- | --- |
 | User | |
-| Bike | is_working? |
+| Bike | working? |
 | Docking Station | release_bike |
