@@ -53,3 +53,7 @@ I want to see if the bike has been docked
 | User | |
 | Docking Station | dock_bike |
 | | bikes |
+
+As a member of the public
+So that I am not confused and charged unnecessarily.
+I'd like docking stations to not release bikes when there are none available.
