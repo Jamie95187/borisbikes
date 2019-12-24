@@ -40,12 +40,12 @@ I'd like to see if the bike is working.
 | Bike | working? |
 | Docking Station | release_bike |
 
-As a member of the public
-So I can return the bikes I've hired
+As a member of the public <br>
+So I can return the bikes I've hired <br>
 I want to dock my bike at the docking station
 
-As a member of the public
-So I can decide whether to use the docking station
+As a member of the public <br>
+So I can decide whether to use the docking station <br>
 I want to see if the bike has been docked
 
 | **Object** | **Messages |
@@ -54,6 +54,10 @@ I want to see if the bike has been docked
 | Docking Station | dock_bike |
 | | bikes |
 
-As a member of the public
-So that I am not confused and charged unnecessarily.
+As a member of the public <br>
+So that I am not confused and charged unnecessarily. <br>
 I'd like docking stations to not release bikes when there are none available.
+
+As a maintainer of the system <br>
+So that I can control the distributions of bikes <br>
+I'd like docking stations not to accept more bikes than their capacity.

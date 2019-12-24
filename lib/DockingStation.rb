@@ -13,6 +13,7 @@ class DockingStation
   end
 
   def dock_bike(bike)
+    fail "Already at max capacity" unless @bikes.size < 1
     @bikes << bike
   end
 end
