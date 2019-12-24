@@ -50,6 +50,10 @@ As a maintainer of the system <br>
 So that I can control the distributions of bikes <br>
 I'd like docking stations not to accept more bikes than their capacity.
 
+As a system maintainer <br>
+So that I can plan the distributions of bikes <br>
+I want a docking station to have a default capacity of 20 bikes
+
 | **Object** | **Messages** |
 |--- | --- |
 | User | |
