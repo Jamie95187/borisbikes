@@ -54,6 +54,10 @@ As a system maintainer <br>
 So that I can plan the distributions of bikes <br>
 I want a docking station to have a default capacity of 20 bikes
 
+As a system maintainer <br>
+So that busy areas can be served more effectively <br>
+I want to be able to specify a larger capacity when necessary.
+
 | **Object** | **Messages** |
 |--- | --- |
 | User | |
