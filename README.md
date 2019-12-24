@@ -4,12 +4,12 @@ A system for the Boris Bikes of London, users can dock and hire bikes from docki
 
 ## User Stories & Domain Models
 
-As a person,
-So that I can use a bike,
+As a person,<br>
+So that I can use a bike,<br>
 I'd like a docking station to release a bike.
 
-As a person,
-So that I can use a good bike,
+As a person,<br>
+So that I can use a good bike,<br>
 I'd like to see if the bike is working.
 
 | **Object** | **Messages** |
