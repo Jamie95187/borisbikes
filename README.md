@@ -39,3 +39,17 @@ I'd like to see if the bike is working.
 | User | |
 | Bike | working? |
 | Docking Station | release_bike |
+
+As a member of the public
+So I can return the bikes I've hired
+I want to dock my bike at the docking station
+
+As a member of the public
+So I can decide whether to use the docking station
+I want to see if the bike has been docked
+
+| **Object** | **Messages |
+| --- | --- |
+| User | |
+| Docking Station | dock_bike |
+| | bikes |
