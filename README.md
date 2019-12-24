@@ -20,6 +20,8 @@ Use the following command to install the relevant gems:
 
 For the unit testing type `rspec` in the root directory for this project. Feature tests can be run on an online repl or use irb in terminal.
 
+Used rubocop as linter. This can be used by typing `rubocop` in the project's root directory.
+
 ## User Stories & Domain Models
 
 As a person,<br>

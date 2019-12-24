@@ -2,9 +2,9 @@ require 'dockingstation'
 
 describe DockingStation do
 
-  it 'should release a bike' do
-    ds = DockingStation.new
-    expect(ds).to respond_to(:release_bike)
+  it 'should respond to release_bike' do
+    docking_station = DockingStation.new
+    expect(docking_station).to respond_to(:release_bike)
   end
 
 end
