@@ -12,13 +12,15 @@ To clone the repository, navigate to the path that you would like the repository
 
 ### Installing the gems
 
-Use the following command to install the relevant gems:
+Use the following command to install the gems:
 
 `bundle install`
 
 ## Testing
 
-For the unit testing type `rspec` in the root directory for this project. Feature tests can be run on an online repl or use irb in terminal.
+For the unit testing type `rspec` in the root directory for this project.
+
+Feature tests can be run on an online repl or use irb in terminal.
 
 Used rubocop as linter. This can be used by typing `rubocop` in the project's root directory.
 
