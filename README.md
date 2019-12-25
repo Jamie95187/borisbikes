@@ -91,12 +91,11 @@ I'd like vans to collect working bikes from garages and distribute them to docki
 | **Object** | **Messages** |
 |--- | --- |
 | User | |
-| Bike | working?
-| | report_broken
-| Docking Station | release_bike |
-
-| **Object** | **Messages |
-| --- | --- |
-| User | |
+| Bike | working? |
+| | report_broken |
 | Docking Station | dock_bike |
-| | bikes |
+| | release_bike |
+| | capacity |
+| Van | collect |
+| | deliver |
+| Garage | bikes |
