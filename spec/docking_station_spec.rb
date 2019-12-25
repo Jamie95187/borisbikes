@@ -78,8 +78,12 @@ describe DockingStation do
   context 'a broken bike' do
 
     let(:bike) { double :bike }
-    it 'returns a broken bike with no error' do
+    it 'docks a broken bike with no error' do
+      allow(bike).to receive(:report_broken).and_return false
+      bike.report_broken
+      allow(bike).to receive(:working?).and_return false
       expect { subject.dock_bike(bike) }.not_to raise_error
+      expect { subject.release_bike }.to raise_error("No working bikes available")
     end
 
   end
