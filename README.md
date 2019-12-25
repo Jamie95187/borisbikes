@@ -58,6 +58,18 @@ As a system maintainer <br>
 So that busy areas can be served more effectively <br>
 I want to be able to specify a larger capacity when necessary.
 
+As a member of the public <br>
+So that I reduce the chance of getting a broken bike in the future <br>
+I'd like to return a broken bike when I return it
+
+As a maintainer of the system <br>
+So I can manage broken bikes and not disappoint the users <br>
+I'd like docking stations to not release broken bikes
+
+As a maintainer of the system <br>
+So I can manage broken bikes and not disappoint the users <br>
+I'd like the docking stations to accept returning bikes (broken or not).
+
 | **Object** | **Messages** |
 |--- | --- |
 | User | |

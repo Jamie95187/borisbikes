@@ -24,12 +24,35 @@ describe DockingStation do
     it 'should get a bike that is working from the station' do
       bike = Bike.new
       subject.dock_bike(bike)
-      bike = subject.release_bike
       expect(bike.working?).to be true
     end
 
     it 'should raise an error if there are no bikes available to release' do
       expect { subject.release_bike }.to raise_error("No bikes available")
+    end
+
+    context 'broken bike' do
+      let(:bike) { Bike.new(false) }
+
+      it 'should raise an error if the bike is broken' do
+        # Bike is broken
+        subject.dock_bike(bike)
+        expect(bike.working?).to be false
+        expect { subject.release_bike }.to raise_error("No working bikes available")
+      end
+
+      context 'a working bike' do
+
+        let(:bike2) { Bike.new }
+        it 'releases a working bike' do
+          subject.dock_bike(bike)
+          subject.dock_bike(bike2)
+          expect(subject.release_bike.working?).to be true
+          expect { subject.release_bike }.to raise_error("No working bikes available")
+        end
+
+      end
+
     end
 
   end
@@ -46,6 +69,15 @@ describe DockingStation do
 
   it 'has a capacity' do
     expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  end
+
+  context 'a broken bike' do
+
+    let(:bike) { Bike.new(false) }
+    it 'returns a broken bike with no error' do
+      expect { subject.dock_bike(bike) }.not_to raise_error
+    end
+
   end
 
 end

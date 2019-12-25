@@ -12,8 +12,9 @@ class DockingStation
 
   def release_bike
     fail "No bikes available" if empty?
+    fail "No working bikes available" unless working?
 
-    @bikes.pop
+    @bikes.delete_at(find_first_working_index)
   end
 
   def dock_bike(bike)
@@ -34,4 +35,12 @@ class DockingStation
     @bikes.empty?
   end
 
+  def working?
+    @bikes.each { |bike| return true if bike.working? }
+    false
+  end
+
+  def find_first_working_index
+    @bikes.find_index { |bike| bike.working? }
+  end
 end
