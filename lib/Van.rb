@@ -14,7 +14,12 @@ class Van
   end
 
   def unload_bikes(garage)
-    garage.storage << @bikes.pop until @bikes.count == 0
+    populate_garage(garage)
+    @bikes.clear
+  end
+
+  def populate_garage(garage)
+    @bikes.each { |bike| garage.storage << bike }
   end
 
 end
