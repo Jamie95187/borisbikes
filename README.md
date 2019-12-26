@@ -10,6 +10,10 @@ To clone the repository, navigate to the path that you would like the repository
 
 `git clone https://github.com/Jamie95187/borisbikes.git`
 
+After cloning the repository enter the root directory for the project
+
+`cd borisbikes`
+
 ### Installing the gems
 
 Use the following command to install the gems:
