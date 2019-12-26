@@ -1,3 +1,5 @@
+require_relative 'bike'
+
 class Garage
   attr_reader :storage
 
@@ -7,4 +9,7 @@ class Garage
     @storage = []
   end
 
+  def fix_bikes
+    @storage.map { |bike| bike.fix }
+  end
 end
