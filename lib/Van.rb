@@ -8,7 +8,8 @@ class Van
   end
 
   def get_bikes(station)
-    station.bikes.each { |bike| @bikes << bike if !bike.working? }
+    station.bikes.each { |bike| @bikes << bike unless bike.working? }
+    @bikes
   end
 
 end
