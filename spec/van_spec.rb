@@ -3,6 +3,7 @@ require 'van'
 describe Van do
   let(:bike) { double :bike }
   let(:station) { double :dockingstation }
+  let(:garage) { double :garage }
 
   describe '#get_bikes' do
     let(:bike2) { double :bike }
@@ -41,7 +42,6 @@ describe Van do
   end
 
   describe '#unload_bikes' do
-    let(:garage) { double :garage }
 
     it 'should unload all the bikes from the van' do
       allow(bike).to receive(:working?).and_return false
@@ -52,6 +52,31 @@ describe Van do
       subject.get_bikes(station)
       subject.unload_bikes(garage)
       expect(subject.bikes.count).to eq 0
+    end
+
+  end
+
+  describe '#get_fixed_bikes' do
+
+    it 'should retrieve the fixed bikes from the garage' do
+      allow(bike).to receive(:working?).and_return true
+      allow(garage).to receive(:storage).and_return [bike]
+      subject.get_fixed_bikes(garage)
+      expect(subject.bikes).to eq [bike]
+    end
+
+  end
+
+  describe '#distribute_bikes' do
+
+    it 'should distribute the bikes to the station' do
+      allow(bike).to receive(:working?).and_return true
+      allow(garage).to receive(:storage).and_return [bike]
+      allow(station).to receive(:dock_bike).with bike
+      allow(station).to receive(:bikes).and_return [bike]
+      subject.get_fixed_bikes(garage)
+      subject.distribute_bikes(station)
+      expect(subject.bikes).to eq []
     end
 
   end

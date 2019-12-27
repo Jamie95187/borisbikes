@@ -1,3 +1,5 @@
+require_relative 'dockingstation'
+
 class Van
   attr_reader :bikes
 
@@ -20,6 +22,16 @@ class Van
 
   def populate_garage(garage)
     @bikes.each { |bike| garage.storage << bike }
+  end
+
+  def get_fixed_bikes(garage)
+    garage.storage.each { |bike| @bikes << bike if bike.working? }
+    @bikes
+  end
+
+  def distribute_bikes(station)
+    @bikes.each { |bike| station.dock_bike(bike) if bike.working? }
+    @bikes -= station.bikes
   end
 
 end
