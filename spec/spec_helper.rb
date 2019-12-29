@@ -4,7 +4,11 @@ require 'simplecov-console'
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console
 ])
-SimpleCov.start
+SimpleCov.start do
+  add_filter "lib/bike.rb"
+  add_filter "lib/bikecontainer.rb"
+  add_filter "lib/dockingstation.rb"
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

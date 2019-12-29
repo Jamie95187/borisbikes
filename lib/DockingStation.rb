@@ -1,10 +1,12 @@
-require_relative 'bike'
+require_relative 'Bike'
+require_relative 'BikeContainer'
 
 class DockingStation
   include BikeContainer
 
   def release_bike
-    fail 'No bikes available' if working_bikes.empty?
+    fail 'No working bikes available' if working_bikes.empty?
+    
     bikes.delete working_bikes.pop
   end
 
@@ -14,17 +16,18 @@ class DockingStation
 
   def get_broken_bike
     fail 'No broken bikes' if broken_bikes.empty?
+
     bikes.delete broken_bikes.pop
   end
 
   private
 
   def working_bikes
-    bikes.reject{ |bike| !bike.working? }
+    bikes.select { |bike| bike.working? }
   end
 
   def broken_bikes
-    bikes.reject{ |bike| bike.working? }
+    bikes.reject { |bike| bike.working? }
   end
 
 end

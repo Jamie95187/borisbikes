@@ -10,11 +10,13 @@ module BikeContainer
 
   def add_bike(bike)
     raise "#{self.class.name} full" if full?
+
     bikes << bike
   end
 
-  def remove_bike 
+  def remove_bike
     raise "#{self.class.name} empty" if empty?
+
     bikes.pop
   end
 

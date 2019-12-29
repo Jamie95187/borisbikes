@@ -15,5 +15,6 @@ class Bike
 
   def fix
     @working = true
+    return self
   end
 end

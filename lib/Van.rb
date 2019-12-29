@@ -1,10 +1,12 @@
-require_relative 'dockingstation'
+require_relative 'BikeContainer'
+require_relative 'DockingStation'
 
 class Van
   include BikeContainer
 
   def load(station)
     fail 'No space left in van' if full?
+    
     add_bike station.get_broken_bike
     bikes
   end
@@ -19,8 +21,7 @@ class Van
   end
 
   def get_fixed_bikes(garage)
-    garage.bikes.each { |bike| @bikes << bike if bike.working? }
-    bikes
+    bikes << garage.remove_bike
   end
 
   def distribute_bikes(station)

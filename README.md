@@ -24,7 +24,9 @@ Use the following command to install the gems:
 
 For the unit testing, you can type `rspec` in the root directory for this project.
 
-Feature tests can be run on an online repl, `irb` or `pry` in terminal.
+Feature tests can be run on an online repl, `irb` or `pry` in terminal. Refer to the image below to see how to feature test in `pry`
+
+<img src="./images/Screen\ 2019-12-29 at 22.07.49.png" width="400"/>
 
 Used rubocop as linter. This can be used by typing `rubocop` in the project's root directory.
 
@@ -32,10 +34,10 @@ The test coverage is shown in the terminal when typing `rspec`.
 
 ### Gems used
 
-pry - alternative to irb (used for feature testing the system)
-rspec - used for unit testing the model
-rubocop - linter used to write conventional ruby
-simplecov - to calculate test coverage over the project
+pry - alternative to irb (used for feature testing the system) <br>
+rspec - used for unit testing the model <br>
+rubocop - linter used to write conventional ruby <br>
+simplecov - to calculate test coverage over the project <br>
 simplecov-console - to display the coverage onto the terminal
 
 ## User Stories & Domain Models

@@ -41,6 +41,7 @@ describe Van do
     it 'should retrieve the fixed bikes from the garage' do
       allow(bike).to receive(:working?).and_return true
       allow(garage).to receive(:bikes).and_return [bike]
+      allow(garage).to receive(:remove_bike).and_return bike
       subject.get_fixed_bikes(garage)
       expect(subject.empty?).to be_falsey
     end
@@ -53,6 +54,7 @@ describe Van do
       allow(bike).to receive(:working?).and_return true
       allow(garage).to receive(:bikes).and_return [bike]
       allow(station).to receive(:dock).with bike
+      allow(garage).to receive(:remove_bike).and_return bike
       subject.get_fixed_bikes(garage)
       subject.distribute_bikes(station)
       expect(subject.empty?).to be_truthy

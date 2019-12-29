@@ -7,7 +7,7 @@ describe Garage do
   let(:station) { double :station }
   let(:van) { Van.new }
   let(:bike) { double :bike }
-  let(:bike2) { double :bike}
+  let(:bike2) { double :bike }
   let(:bike3) { double :bike }
 
   it "should populate the garage's storage unit" do

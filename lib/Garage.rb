@@ -1,4 +1,5 @@
-require_relative 'bike'
+require_relative 'Bike'
+require_relative 'BikeContainer'
 
 class Garage
   include BikeContainer

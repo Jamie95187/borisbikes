@@ -1,6 +1,5 @@
-require 'bike_container'
+require 'bikecontainer'
 require_relative './support/shared_examples_for_bike_container.rb'
-
 
 class BikeContainerTest
   include BikeContainer
