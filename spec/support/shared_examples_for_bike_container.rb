@@ -33,7 +33,6 @@ shared_examples_for BikeContainer do
       expect(subject.remove_bike).to eq bike
       expect(subject).to be_empty
 
-      # expect { subject.remove_bike }.to raise_error "#{described_class.name} is empty"
     end
   end
 
