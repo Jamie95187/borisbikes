@@ -26,7 +26,7 @@ For the unit testing, you can type `rspec` in the root directory for this projec
 
 Feature tests can be run on an online repl, `irb` or `pry` in terminal. Refer to the image below to see how to feature test in `pry`
 
-<img src="./images/Screen 2019-12-29 at 22.07.49.png" width="400"/>
+<img src="./images/Screenshot 2019-12-29 at 22.07.49.png" width="400"/>
 
 Used rubocop as linter. This can be used by typing `rubocop` in the project's root directory.
 
