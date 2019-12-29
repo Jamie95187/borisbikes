@@ -1,37 +1,31 @@
 require_relative 'dockingstation'
 
 class Van
-  attr_reader :bikes
+  include BikeContainer
 
-  MAXIMUM_CAPCITY = 15
-
-  def initialize(capacity = MAXIMUM_CAPCITY)
-    @capacity = capacity
-    @bikes = []
+  def load(station)
+    fail 'No space left in van' if full?
+    add_bike station.get_broken_bike
+    bikes
   end
 
-  def get_bikes(station)
-    station.bikes.each { |bike| @bikes << bike unless bike.working? }
-    @bikes
-  end
-
-  def unload_bikes(garage)
+  def unload(garage)
     populate_garage(garage)
-    @bikes.clear
+    bikes.clear
   end
 
   def populate_garage(garage)
-    @bikes.each { |bike| garage.storage << bike }
+    bikes.each { |bike| garage.add_bike bike && remove_bike }
   end
 
   def get_fixed_bikes(garage)
-    garage.storage.each { |bike| @bikes << bike if bike.working? }
-    @bikes
+    garage.bikes.each { |bike| @bikes << bike if bike.working? }
+    bikes
   end
 
   def distribute_bikes(station)
-    @bikes.each { |bike| station.dock_bike(bike) if bike.working? }
-    @bikes -= station.bikes
+    bikes.each { |bike| station.dock(bike) if bike.working? }
+    remove_bike
   end
 
 end
