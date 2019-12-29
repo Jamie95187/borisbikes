@@ -24,13 +24,17 @@ Use the following command to install the gems:
 
 For the unit testing, you can type `rspec` in the root directory for this project.
 
+<img src="./images/rspec.png" width="300"/>
+
 Feature tests can be run on an online repl, `irb` or `pry` in terminal. Refer to the image below to see how to feature test in `pry`
 
-<img src="./images/Screenshot 2019-12-29 at 22.07.49.png" width="400"/>
+<img src="./images/pry.png" width="400"/>
 
 Used rubocop as linter. This can be used by typing `rubocop` in the project's root directory.
 
 The test coverage is shown in the terminal when typing `rspec`.
+
+ A 95%+ test coverage was achieved for this project.
 
 ### Gems used
 
@@ -41,6 +45,7 @@ simplecov - to calculate test coverage over the project <br>
 simplecov-console - to display the coverage onto the terminal
 
 ## User Stories & Domain Models
+```
 
 As a person,<br>
 So that I can use a bike,<br>
@@ -93,6 +98,8 @@ I'd like vans to take broken bikes from the docking stations and deliver them to
 As a maintainer of the system <br>
 So that I can manage broken bikes and not disappoint users <br>
 I'd like vans to collect working bikes from garages and distribute them to docking stations.
+
+```
 
 | **Object** | **Messages** |
 |--- | --- |
